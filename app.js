@@ -8,10 +8,7 @@ var indexRouter = require('./routes/student');
 var app = express();
 var mongoose = require("mongoose");
 
-var dev_db_url =
-  "mongodb+srv://Adrien0602:6SGCnp3qZfQ0K9ii@iut.lqrr3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-
-var mongoDB = process.env.MONGODB_URI || dev_db_url;
+var mongoDB = process.env.MONGODB_URI;
 
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 
